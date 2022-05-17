@@ -1,14 +1,18 @@
 import React from "react";
+import Login from "./Login";
+
+var isLoggedIn = false;
+
+
+// const currentTime = new Date().getHours();
 
 function App() {
   return (
     <div className="container">
-      <h1>Hello</h1>
-      <form className="form">
-        <input type="text" placeholder="Username" />
-        <input type="password" placeholder="Password" />
-        <button type="submit">Login</button>
-      </form>
+      {isLoggedIn ? <h1>Hello</h1> : <Login />}
+
+      {/* Message that can be rendered based on current time */}
+      {/* {currentTime > 18 && <h1>Why are you still working?</h1>} */}
     </div>
   );
 }
